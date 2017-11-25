@@ -17,17 +17,17 @@
  
   // instantiate d3plus
   // var visualization =
+   var data = "https://raw.githubusercontent.com/aaizemberg/vis/gh-pages/graduados/data.tsv"
+  
   d3plus.viz()
-    .container("#viz")  // container DIV to hold the visualization
-    .data(url)  // data to use with the visualization
-    .type("stacked")    // visualization type
-    .id("titulo")         // key for which our data is unique on
-    .format("es_ES")       // key to use for display text
-    .y("cant")         // key to use for y-axis
-    .x("año")          // key to use for x-axis
-    .time("año")       // key to use for time
-    .shape({"interpolate":"monotone"})
-    .draw()             // finally, draw the visualization!
+    .container("#viz")
+    .data(data)
+    .type("pie")
+    .format("es_ES")
+    .id("titulo")
+    .size("cant")
+    .time("año")
+    .draw()
   
   
     // sample data array
